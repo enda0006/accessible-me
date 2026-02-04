@@ -1,17 +1,18 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f4f4f4; /* dark text on light background inproves readability */
   margin: 0;
   padding: 0;
 }
 
+/* Headings use a different font to stand out */ 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5{
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 .container {
@@ -24,6 +25,26 @@ img {
   width: 100%;
 }
 
+/* skip links are normally hidden, pressing tab key, link gets focus and appears and pressing enter takes you directly to main content */
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus{
+  top: 0;
+}
+/* Nav section */
+
+#main-content{
+  margin: 15px;
+  padding: 1rem;
+}
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -32,31 +53,32 @@ img {
   padding: 0;
 }
 
-.main-nav ul li {
-  flex: 1;
-  text-align: center;
-}
-
-.main-nav ul li a {
+/* navigation links */
+.main-nav a{
   display: block;
-  color: inherit;
+  padding: 1rem;
   text-decoration: none;
+  color: inherit;
   font-size: 1.25rem;
 }
 
-form input,
-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
+/* Focus styles help users to see where they are.
+  This is very important for accessibility. */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
 }
 
+/* Form inputs spacing improves usability */
+form input,
 form textarea {
-  min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-  resize: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
 }
 
 form button {
@@ -65,7 +87,6 @@ form button {
   padding: 1rem;
   text-transform: uppercase;
 }
-
 .site-footer {
   padding: 2rem 0;
 }
