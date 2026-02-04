@@ -36,13 +36,13 @@
     <!-- Main contains the most important content on the page id connects it to the skip link so readers can jump directly to main -->
    <main id="main-content" role="main">
     <section>
-      <h1>Welcome to Jam Box</h1>
+      <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <!-- schema person is to discribe details about a person to acceibility users  -->
       </section>
       <section class="owner" itemscope itemtype="https://schema.org/Person">
-        <h2>Meet the owner</h2>
+        <h3>Meet the owner</h3>
         <ul>
           <li>Name: <span itemprop="name"> John Doe</span></li>
           <li>Title: <span itemprop="jobTitle">CEO</span></li>
@@ -51,7 +51,7 @@
           <li>Phone: 613-000-0000</li>
         </ul>
         <!-- Address is specifically for addresses,contact info, business locations it is wrapped in address tag because its is contact info and screen readers recognize it as contact information. -->
-        <h3>Address</h3>
+        <h4>Address</h4>
         <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           <span itemprop="streetAddress">123 Guitar Road</span><br>
           <span itemprop="addressLocality">Musicville</span><br>
@@ -60,7 +60,7 @@
       </section>
       <!-- contact form & labels section -->
       <section class="contact-section">
-        <h2>Contact Us</h2>
+        <h5>Contact Us</h5>
         <!-- aria-label gives context about the form's purpose to screen readers -->
         <form action="thanks.html" aria-label="Contact form">
           <!-- with a label when a screen reader reaches the input, it says:“email, edit text” without a label it says: “edit text” which is confusing and frustrating for accrcibility users. label gives it more specificity -->
@@ -85,7 +85,6 @@
     <footer class="site-footer">
       <p>&copy; 2021 Jam Box Studios</p>
     </footer>
-  </div>
 </body>
 
 </html>
