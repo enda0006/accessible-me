@@ -58,19 +58,28 @@
           <span itemprop="postalCode">B3T 0L0</span>
         </address>
       </section>
+      <!-- contact form & labels section -->
+      <section class="contact-section">
+        <h2>Contact Us</h2>
+        <!-- aria-label gives context about the form's purpose to screen readers -->
+        <form action="thanks.html" aria-label="Contact form">
+          <!-- with a label when a screen reader reaches the input, it says:“email, edit text” without a label it says: “edit text” which is confusing and frustrating for accrcibility users. label gives it more specificity -->
+           <!-- Labels are connected to inputs using for/id -->
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
 
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message"></textarea>
           <button type="submit">Send</button>
         </form>
-      </div>
+      </section>
+
     </main>
     <div class="site-footer">
       &copy; 2021 Jam Box Studios
