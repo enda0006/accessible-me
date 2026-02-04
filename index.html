@@ -50,14 +50,15 @@
             johnjoe@jambox.ca</a></li>
           <li>Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
+        <!-- Address is specifically for addresses,contact info, business locations it is wrapped in address tag because its is contact info and screen readers recognize it as contact information. -->
+        <h3>Address</h3>
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">123 Guitar Road</span><br>
+          <span itemprop="addressLocality">Musicville</span><br>
+          <span itemprop="postalCode">B3T 0L0</span>
+        </address>
       </section>
+
       <div class="contact-section">
         <h1>Contact Us</h1>
         <form action="thanks.html">
