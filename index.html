@@ -13,18 +13,23 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+  <!-- I added the skiplink which allow Accesibility users to skip the navigation and jump straight to the main content, for better access skiplinks are added at the top of the web page -->
+  <a href="main-content" class="skip-link">Skip to main content</a>
+  <!-- Schema.org MusicStore helps search engines understand this is a business -->
+  <div class="container" itemscope itemtype="https://schema.org/MusicStore">
+<!-- Iused header indted of div because div has no meaning and header has meaning, this makes it easier for the computer to read the website so for acciblitity users it tells them that this is the top part of the page -->
+    <header class="site-header">
+      <h1 itemprop="name">Jam Box Studios</h1>
+      <!-- Insted of computer only reading "navigation" to users, adding aria-label gives more clarity so cumputer reads "Main Navigation" this is more clear for accesibility users   -->
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </nav>
+      <img src="https://picsum.photos/1200/900" class="banner" alt="Interior view of a music studio with instruments">  
     </div>
     <div class="main-content">
       <h1>Welcome to Jam Box</h1>
